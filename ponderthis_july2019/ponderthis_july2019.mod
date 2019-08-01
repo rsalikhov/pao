@@ -93,15 +93,15 @@ maximize polygonArea;
 subject to {
 	// restrictions on possible moves
 	forall(c in chessBoard) {
-    	move[c] in knightMove[c];
-    }      
-    // knight's cycle must contain consequent moves
-    forall(p in 2..CYCLE_POINTS) {
-      	seq[p] == move[seq[p-1]];
+    		move[c] in knightMove[c];
+    	}      
+    	// knight's cycle must contain consequent moves
+    	forall(p in 2..CYCLE_POINTS) {
+      		seq[p] == move[seq[p-1]];
 	}
    	// knight's cycle must be closed 
-    move[seq[CYCLE_POINTS]] == seq[1];
-    // moves must be unique
+    	move[seq[CYCLE_POINTS]] == seq[1];
+    	// moves must be unique
    	allDifferent(seq);
    	forall(c in cycle) {
    	   	// compute x-coordinate of move
@@ -113,7 +113,6 @@ subject to {
 		// compute y-coordinate of previous move
 		movePrevY[c] == ((c == 1) ? moveY[CYCLE_POINTS] : moveY[c-1]);
    	}	
-   	
    	forall(p in pairs) {
    		// compute numerator of fraction t(a)
    		intersectUpA[p] ==
