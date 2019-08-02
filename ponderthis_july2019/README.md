@@ -13,7 +13,7 @@ Let's discuss point-by-point.
   
   So, our candidates (X,Y) are: **(13,3), (10,4), (8,5)**.
 
-* The costraint that knight's cycle must be non-intersecting may be obtained from [this article](http://www.cs.swan.ac.uk/~cssimon/line_intersection.html). Let's define one of the khight's cycle edge as e1 with start point (x1,y1) and end point (x2,y2), another as e2 with start point (x3,y3) and end point (x4,y4). Then calculate t(a) and t(b) to check lines intersection.
+* The constraint that knight's cycle must be non-intersecting may be obtained from [this article](http://www.cs.swan.ac.uk/~cssimon/line_intersection.html). Let's define one of the knight's cycle edge as e1 with start point (x1,y1) and end point (x2,y2), another as e2 with start point (x3,y3) and end point (x4,y4). Then calculate t(a) and t(b) to check lines intersection.
 
 * To compute polygon area we may use results from [this article](https://www.mathopenref.com/coordpolygonarea.html).
 
@@ -21,7 +21,7 @@ The puzzle was solved using *Constraint Programming (CP)* - a powerful paradigm 
 
 I used **CP Optimizer** provided by IBM as optimization engine. The optimization model was written in **OPL**.
 
-On the one hand, we need to find the non-intersecting knight's cycle with minimum polygon area. We should solve the minimization problem - minimize polygon area of khight's cycle depending on board size (X,Y).
+On the one hand, we need to find the non-intersecting knight's cycle with minimum polygon area. We should solve the minimization problem - minimize polygon area of knight's cycle depending on board size (X,Y).
 
 The results are given in the table below. 
 
@@ -31,7 +31,7 @@ The results are given in the table below.
 | knight's cycle              | **b2 c4 d6 b5 c7 a8 b6 a4 c5 b3 a1 c2 e1 d3 b2** |
 | polygon area:               | **8**                                            |
 
-On the other hand, we need to find the non-intersecting knight's cycle with maximum polygon area. We should solve the maximization problem - maximize polygon area of khight's cycle depending on board size (X,Y). 
+On the other hand, we need to find the non-intersecting knight's cycle with maximum polygon area. We should solve the maximization problem - maximize polygon area of knight's cycle depending on board size (X,Y). 
 
 The results are given in the table below. 
 
@@ -43,6 +43,6 @@ The results are given in the table below.
 
 So, the difference between their areas is exactly 7.
 
-Graphical perspectives of these khight's cycles are given below (left: polygon area is 8, right: polygon area is 15):
+Graphical perspectives of these knight's cycles are given below (left: polygon area is 8, right: polygon area is 15):
 <img src="https://github.com/rsalikhov/pao/blob/master/ponderthis_july2019/polygon_area_8.jpg" width="200"> 
 <img src="https://github.com/rsalikhov/pao/blob/master/ponderthis_july2019/polygon_area_15.jpg" width="200"> 
