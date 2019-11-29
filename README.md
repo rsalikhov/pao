@@ -3,6 +3,7 @@ This repository contains my public programs and models (mostly optimization prob
 ## Table of contents:
 * [ponderthis_july2019](ponderthis_july2019/README.md) - IBM monthly puzzle (large- and small-area knight's cycles)
 * [ponderthis_september2019](ponderthis_september2019/README.md) - IBM monthly puzzle (five banknote denominations)
+* [ponderthis_october2019](ponderthis_october2019/README.md) - IBM monthly puzzle (five banknotes II)
 
 I'll try to keep this repository as updated as possible.
 
